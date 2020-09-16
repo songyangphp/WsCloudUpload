@@ -1,0 +1,23 @@
+{
+  "name": "wslibs/cloud_upload",
+  "description": "云上传文件存储",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "songyangphp",
+      "email": "475511896@qq.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "wslibs\\cloud_upload\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "wslibs/cunchuio" : ">=0.0.1",
+    "epii/admin-ui-upload" : ">=0.0.1"
+  }
+}
