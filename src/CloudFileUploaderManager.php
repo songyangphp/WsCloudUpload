@@ -17,7 +17,7 @@ class CloudFileUploaderManager
             if($cloud_chunchu_config && $uploader){
                 if(class_exists($uploader)){
                     $uploader_object = new $uploader;
-                    if(new $uploader_object instanceof IUploader){
+                    if($uploader_object instanceof IUploader){
                         $uploader_object->init($cloud_chunchu_config);
                         AdminUiUpload::setUploadHandler($uploader);
                     }else{
