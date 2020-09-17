@@ -8,9 +8,14 @@ use wslibs\storage\CunChuIO;
 
 class AzureCloudFileUploader implements IUploader
 {
+    private static $azure_cloud_url;
+
     public function init($config = [])
     {
         CunChuIO::setConfig($config);
+        if(isset($config['azure_cloud_url']) && !empty($config['azure_cloud_url'])){
+            self::$azure_cloud_url = $config['azure_cloud_url'];
+        }
     }
 
     public function handlePostFiles(array $allowedExts = ["gif", "jpeg", "jpg", "png"], $file_size = 204800, $dir = null, $url_pre = null): UploaderResult
@@ -67,6 +72,9 @@ class AzureCloudFileUploader implements IUploader
 
     private static function getCloudRootDir()
     {
-        return "https://wszxstore.blob.core.chinacloudapi.cn/".CunChuIO::$rongqi."/uploads/";
+        if(self::$azure_cloud_url){
+            return self::$azure_cloud_url . "/" .CunChuIO::$rongqi."/uploads/";
+        }
+        return "https://".CunChuIO::$storename.".blob.core.chinacloudapi.cn/".CunChuIO::$rongqi."/uploads/";
     }
 }
