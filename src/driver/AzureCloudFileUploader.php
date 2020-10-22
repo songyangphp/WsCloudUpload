@@ -41,7 +41,7 @@ class AzureCloudFileUploader implements IUploader
                         CunChuIO::uploadContent($file_path , file_get_contents($file['tmp_name']));
                         $cloud_url = self::getCloudRootDir().$file_path;
                         $url[] = $cloud_url;
-                        $paths[] = $cloud_url;
+                        $paths[] = $file_path;
                     }
                 }else{
                     $ret->error("格式或大小不符合");
@@ -70,7 +70,7 @@ class AzureCloudFileUploader implements IUploader
         return date("Ymd")."/".date("His").uniqid().".".$ext;
     }
 
-    private static function getCloudRootDir()
+    public static function getCloudRootDir()
     {
         if(self::$azure_cloud_url){
             return self::$azure_cloud_url . "/" .CunChuIO::$rongqi."/uploads/";
