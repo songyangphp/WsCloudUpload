@@ -12,12 +12,14 @@
 
   "autoload": {
     "psr-4": {
-      "wslibs\\cloud_upload\\": "src/"
+      "wslibs\\cloud_upload\\": "src/",
+      "app\\":"src/app"
     }
   },
   "require": {
     "php": ">=7.0.0",
     "wslibs/cunchuio" : ">=0.0.1",
-    "epii/admin-ui-upload" : ">=0.0.1"
+    "epii/admin-ui-upload" : ">=0.0.1",
+    "epii/admin-center": "^0.5.8"
   }
 }

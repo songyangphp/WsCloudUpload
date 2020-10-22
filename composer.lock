@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa9f091e5fd2c4d9c46949fcdb922f3b",
+    "content-hash": "0944ed73d760e781ae8ce940d0969b9f",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -43,6 +43,137 @@
             "homepage": "https://github.com/container-interop/container-interop",
             "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "epii/admin-center",
+            "version": "0.5.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-admin-project-composer.git",
+                "reference": "fdfc53a4379774dd98d30e010613dd4d0514e235"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-admin-project-composer/zipball/fdfc53a4379774dd98d30e010613dd4d0514e235",
+                "reference": "fdfc53a4379774dd98d30e010613dd4d0514e235",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "epii/admin-ui-login": ">=0.0.1",
+                "epii/admin-ui-upload": ">=0.0.1",
+                "epii/get-all-classes-and-methods-for-namespaces": ">=0.0.1",
+                "epii/tiny-app-plus": ">=0.0.1",
+                "php": ">=7.0",
+                "wangshouwei/session": ">=0.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\admin\\center\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "通用后台管理中心，一件安装，全界面可定制！",
+            "time": "2020-09-17T06:31:33+00:00"
+        },
+        {
+            "name": "epii/admin-ui",
+            "version": "0.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-admin-ui.git",
+                "reference": "9e4f6a401ef3cb9c0b8ac76bf22c45860ea31ac3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-admin-ui/zipball/9e4f6a401ef3cb9c0b8ac76bf22c45860ea31ac3",
+                "reference": "9e4f6a401ef3cb9c0b8ac76bf22c45860ea31ac3",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\admin\\ui\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "EpiiAdmin php开源交互性管理后台框架,基于Thinkphp5.1+Adminlte3.0+Require.js, 让复杂的交互变得更简单！Phper快速搭建交互性平台的开发框架",
+            "time": "2020-06-30T03:45:45+00:00"
+        },
+        {
+            "name": "epii/admin-ui-login",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-admin-ui-login.git",
+                "reference": "44e67f3692cb49591c199a84fac11e0f231f86c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-admin-ui-login/zipball/44e67f3692cb49591c199a84fac11e0f231f86c7",
+                "reference": "44e67f3692cb49591c199a84fac11e0f231f86c7",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\ui\\login\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "基于epii/admin-ui 的登录模块",
+            "time": "2020-06-24T09:41:23+00:00"
         },
         {
             "name": "epii/admin-ui-upload",
@@ -85,6 +216,310 @@
             ],
             "description": "基于epii/admin-ui 的上传模块",
             "time": "2020-09-16T02:27:27+00:00"
+        },
+        {
+            "name": "epii/api-result",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-php-api-result.git",
+                "reference": "fd635b0e41b544228ecceaa067b6dca8d0ce2ceb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-php-api-result/zipball/fd635b0e41b544228ecceaa067b6dca8d0ce2ceb",
+                "reference": "fd635b0e41b544228ecceaa067b6dca8d0ce2ceb",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\api\\result\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "标准api返回数据类。",
+            "time": "2019-03-21T06:21:15+00:00"
+        },
+        {
+            "name": "epii/cache",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-php-cache.git",
+                "reference": "a764d434bb4787aa2d449faaa2b485a8a3674d72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-php-cache/zipball/a764d434bb4787aa2d449faaa2b485a8a3674d72",
+                "reference": "a764d434bb4787aa2d449faaa2b485a8a3674d72",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "一个超级简单的php cache 管理器。",
+            "time": "2019-03-25T05:38:57+00:00"
+        },
+        {
+            "name": "epii/get-all-classes-and-methods-for-namespaces",
+            "version": "0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/php-get-all-classes-and-methods-for-namespaces.git",
+                "reference": "ca14b56d1f5c05ae1946c58e247157e7f3b2b52b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/php-get-all-classes-and-methods-for-namespaces/zipball/ca14b56d1f5c05ae1946c58e247157e7f3b2b52b",
+                "reference": "ca14b56d1f5c05ae1946c58e247157e7f3b2b52b",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\tools\\classes\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "获取某命名空间下的所有类和方法",
+            "time": "2019-01-15T05:39:42+00:00"
+        },
+        {
+            "name": "epii/template-engine",
+            "version": "1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-php-template.git",
+                "reference": "e537ce4792426179559282865d251c38cddeaac1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-php-template/zipball/e537ce4792426179559282865d251c38cddeaac1",
+                "reference": "e537ce4792426179559282865d251c38cddeaac1",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\template\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "一个超级简单的php template engine，可扩展其它模板引擎。",
+            "time": "2020-05-21T02:33:20+00:00"
+        },
+        {
+            "name": "epii/think-orm",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-think-orm.git",
+                "reference": "4866277646a81ac5209c53d9202e0569a4e3f878"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-think-orm/zipball/4866277646a81ac5209c53d9202e0569a4e3f878",
+                "reference": "4866277646a81ac5209c53d9202e0569a4e3f878",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\orm\\": "src/",
+                    "think\\": "src/think/"
+                },
+                "files": [
+                    "src/think/config.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "think-orm 的兼容性处理,及常用方法",
+            "time": "2020-07-28T02:26:26+00:00"
+        },
+        {
+            "name": "epii/tiny-app",
+            "version": "2.5.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/php-tiny-app.git",
+                "reference": "6e03aa310ae6dccf75b0a9ea1c2431ec5be65c2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/php-tiny-app/zipball/6e03aa310ae6dccf75b0a9ea1c2431ec5be65c2d",
+                "reference": "6e03aa310ae6dccf75b0a9ea1c2431ec5be65c2d",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\server\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "一个超级简单的php app基础，可用于简单的api开发,cli app 开发。",
+            "time": "2020-09-17T06:32:24+00:00"
+        },
+        {
+            "name": "epii/tiny-app-plus",
+            "version": "0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/epii-php-app-plus.git",
+                "reference": "399576480984f26ceea4bf96e6e99320f56527cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/epii-php-app-plus/zipball/399576480984f26ceea4bf96e6e99320f56527cf",
+                "reference": "399576480984f26ceea4bf96e6e99320f56527cf",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "epii/admin-ui": ">=0.0.1",
+                "epii/api-result": ">=0.0.1",
+                "epii/cache": ">=0.0.1",
+                "epii/template-engine": ">=0.0.1",
+                "epii/think-orm": ">=0.0.1",
+                "epii/tiny-app": ">=0.0.1",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "epii\\app\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "epii/tiny-app 的增强版本，融入模板引擎，及ui",
+            "time": "2020-05-15T08:34:49+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -1378,6 +1813,48 @@
                 "punycode"
             ],
             "time": "2016-11-16T10:37:54+00:00"
+        },
+        {
+            "name": "wangshouwei/session",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epaii/wangshouwei-session.git",
+                "reference": "4e12dc5aae7a43db6757bb122e3af99f76f90b26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epaii/wangshouwei-session/zipball/4e12dc5aae7a43db6757bb122e3af99f76f90b26",
+                "reference": "4e12dc5aae7a43db6757bb122e3af99f76f90b26",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "wangshouwei\\session\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MrRen Epii",
+                    "email": "543169072@qq.com"
+                }
+            ],
+            "description": "。",
+            "time": "2019-01-09T02:41:51+00:00"
         },
         {
             "name": "wslibs/cunchuio",
