@@ -20,14 +20,26 @@ class AzureCloudFileUploader implements IUploader
 
     public function handlePostFiles(array $allowedExts = ["gif", "jpeg", "jpg", "png"], $file_size = 204800, $dir = null, $url_pre = null): UploaderResult
     {
+        $files = [];
+        if(isset($_FILES['file']['name']) && !empty($_FILES['file']['name']) && is_array($_FILES['file']['name'])){
+            foreach ($_FILES['file']['name'] as $k => $v){
+                $files[$k]['name'] = $v;
+                $files[$k]['type'] = $_FILES['file']['type'][$k];
+                $files[$k]['tmp_name'] = $_FILES['file']['tmp_name'][$k];
+                $files[$k]['size'] = $_FILES['file']['size'][$k];
+            }
+        }else{
+            $files = $_FILES;
+        }
+
         $ret = new UploaderResult();
-        if(count($_FILES) == 0){
+        if(count($files) == 0){
 
         }else{
             $paths = [];
             $url = [];
 
-            foreach ($_FILES as $k => $file){
+            foreach ($files as $k => $file){
 
                 $temp = explode(".", $file["name"]);
 
