@@ -10,11 +10,16 @@ class AzureCloudFileUploader implements IUploader
 {
     private static $azure_cloud_url;
 
+    private static $site = null;
+
     public function init($config = [])
     {
         CunChuIO::setConfig($config);
         if(isset($config['azure_cloud_url']) && !empty($config['azure_cloud_url'])){
             self::$azure_cloud_url = $config['azure_cloud_url'];
+        }
+        if(isset($config['site']) && !empty($config['site'])){
+            self::$site = $config['site'];
         }
     }
 
@@ -79,7 +84,11 @@ class AzureCloudFileUploader implements IUploader
 
     private static function getCloudFilePath($ext)
     {
-        return date("Ymd")."/".date("His").uniqid().".".$ext;
+        if(!is_null(self::$site)){
+            return self::$site ."/".date("His").uniqid().".".$ext;
+        }else{
+            return date("Ymd")."/".date("His").uniqid().".".$ext;
+        }
     }
 
     public static function getCloudRootDir()
