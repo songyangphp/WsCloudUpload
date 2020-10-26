@@ -82,6 +82,24 @@ class AzureCloudFileUploader implements IUploader
         return true;
     }
 
+    /**
+     * todo 上传base64的方法 接口中尚未实现 但是其他引擎也需要实现
+     * @param $base64_file
+     * @return string
+     */
+    public function uploadBase64File($base64_file)
+    {
+        $ext = "png";
+        $file_path = self::getCloudFilePath($ext);
+        CunChuIO::uploadContent($file_path ,base64_decode($base64_file));
+        $url[] = self::getCloudRootDir().$file_path;
+        $paths[] = $file_path;
+        $ret = new UploaderResult();
+        $ret->success(implode(",", $paths), implode(",", $url));
+        $result = json_encode($ret->getResult());
+        return $result;
+    }
+
     private static function getCloudFilePath($ext)
     {
         if(!is_null(self::$site)){
